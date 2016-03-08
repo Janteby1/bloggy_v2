@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Log in:</h3>
+
+<form action="{% url 'users:login' %}" method="POST">
+
+    {% csrf_token %}
+    {% for field in login_form %}
+        <div class="control-group {%if field.errors %} errorlist{% endif %}"> 
+            {{field.label_tag}} {{field}}
+        </div>
+    {% endfor %}
+    <input class="medium button" type="submit" value="Login" />
+</form>
+
+{% endblock content %}
+
+
+
+

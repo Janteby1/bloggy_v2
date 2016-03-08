@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+    <h2>Welcome Page!</h2>
+
+    <div id="links">
+        <div><a id="logout" href="/posts/logout"> Logout</a></div>
+
+        <div><a id="register" href="/posts/register"> Register</a></div>
+
+        <div><a id="login1" href="/posts/login"> Login</a></div>
+
+        <div>{{ message }}</div>
+
+        <div><a id="create" class=button href="{% url 'posts:create' %}"> Create New Post</a></div>
+    </div>
+
+
+    {% for post in posts %}
+        {% if post.show == True %}
+
+        <div class=post>
+            <a class="title" href="/posts/edit/{{ post.slug }}"> <p class=title> {{ post.title }} 
+            </p> </a>
+            {{ post.content|linebreaks }}
+            <p class="author"> Author: {{ post.user }} </p>
+        </div>
+
+            <p class="date">Create: {{ post.created_at }}  --  Update: {{ post.updated_at }}</p>
+        {% endif %}
+    {% endfor %}
+
+
+{% endblock content %}

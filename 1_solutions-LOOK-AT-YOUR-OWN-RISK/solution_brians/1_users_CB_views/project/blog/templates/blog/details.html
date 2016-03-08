@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="large-12 large-centered columns">
+
+        <article class="post-details">
+            <h3>{{post.title}}</h3>
+            <p>{{post.content}}</p>
+            <footer>
+                Author: {{post.user.username}} <em>  Posted: {{post.created_at}}</em>
+
+            </footer>
+        </article>
+
+    </div>
+</div>
+
+{% endblock content %}

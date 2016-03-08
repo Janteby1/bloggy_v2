@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h3>New Post:</h3>
+
+    <form action="{% url 'blog:add' %}" method="POST">
+        {% csrf_token %}
+
+        {%for field in new_post_form %}
+            <div class="control-group {%if field.errors %}errorlist{%endif%}">
+                {{field.label_tag}} {{ field }}
+            </div>
+        {% endfor %}
+
+        <input class="medium button" type="submit" value="Add Post" />
+    </form>
+    
+{% endblock content %}

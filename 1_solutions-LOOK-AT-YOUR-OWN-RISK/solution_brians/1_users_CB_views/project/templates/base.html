@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bloggy: A Blog about Blogs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.css" />
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/app.css' %}" />
+</head>
+<body>
+
+<div class="container large-8 large-centered columns">
+    <header class="header text-center">
+        <h1><a href="{% url 'blog:index' %}">Bloggy: A Blog about Blogs</a></h1>
+    </header>
+    <nav class="top-bar" data-topbar role="navigation">
+        <section class="top-bar-right"> 
+        <ul class="menu right">
+            {% if username %}
+            <li><a href="{% url 'blog:user' %}">{{username}}</a></li>
+                <li>|</li>
+                <li><a href="{% url 'users:logout' %}">Log out</a>
+            {% else %}
+            <li><a href="{% url 'users:login' %}">Login</a></li>
+            <li>|</li>
+            <li><a href="">Register</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="main-content row">
+        <div class="content large-12 large-centered columns">
+
+        {% block content %}
+
+        {% endblock content %}
+
+        <p></p>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+
+</body>
+</html>

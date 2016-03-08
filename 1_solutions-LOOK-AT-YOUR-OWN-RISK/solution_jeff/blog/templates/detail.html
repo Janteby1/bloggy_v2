@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+    <h1>post</h1>
+
+        <article>
+            <h3><a href="#">{{post.title}}</a></h3>
+            <p>{{post.content}}</p>
+            <footer>
+                Author: {{post.user.username}} <em>Posted: {{post.created_at}}</em>
+            </footer>
+        </article>
+
+        {% if post.user == request.user %}
+            <h3><a href="{% url 'blog:update' pk=post.id %}">Edit</a></h3>
+            <h3><a href="{% url 'blog:delete' pk=post.id %}">Delete</a></h3>
+        {% endif %}
+
+</body>
+</html>

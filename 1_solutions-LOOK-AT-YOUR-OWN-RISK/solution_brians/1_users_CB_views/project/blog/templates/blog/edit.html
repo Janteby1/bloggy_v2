@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Edit Post:</h3>
+
+<form action="{% url 'blog:edit' id=post.id %}" method="POST">
+    {% csrf_token %}
+
+
+    {%for field in edit_post_form %}
+        <div class="control-group {%if field.errors %}errorlist{%endif%}">
+            {{field.label_tag}} {{ field }}
+        </div>
+    {% endfor %}
+
+    <input type="submit" class="button" value="Edit Post" />
+</form>
+
+
+<p></p>    
+
+<div class="row">
+    <div class="large-8 large-centered columns">
+    <form class="text-right" action="{% url 'blog:delete' id=post.id %}" method="POST">
+        {% csrf_token  %}
+        <input type="submit" class="medium alert button" value="Delete Post" />
+    </form>
+    </div>
+</div>
+
+{% endblock content %}

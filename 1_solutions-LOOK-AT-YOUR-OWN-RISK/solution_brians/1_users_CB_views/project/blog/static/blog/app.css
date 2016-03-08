@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+}
+
+.header {
+    background-color: #2199E8;
+    padding: 10px;
+}
+
+.header > h1 > a {
+    color: black;
+}
+
+.container {
+    background-color: white;
+    padding: 0;
+}
+
+.main-content {
+    padding: 0;
+    margin: 0;
+}
+
+.errorlist > input, .errorlist > textarea {
+    border: 3px solid red; 
+}
+
+.post-list {
+    border-top: 0;
+    border-right: 1px solid lightgray;
+    padding: 25px;
+}
+
+.post-details {
+    padding: 25px;
+}
+
+.create-sidebar {
+    margin-top: 25px;
+}
+
+.top-bar, 
+.menu > li,
+.menu a {
+    background-color: #E0E0E0;
+    font-color:white;
+    font-weight: bold;
+}

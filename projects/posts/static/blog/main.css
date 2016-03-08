@@ -1,0 +1,162 @@
+h1 {
+	text-align: center;
+	font-style: italic;
+	color: blue;
+}
+
+body {
+	margin-right: 20px;
+}
+
+h2 {
+	margin-left: 30px;
+	font-weight: bold;
+	color: blue;
+}
+
+p {
+	display: inline-block;
+	margin-left: 25px;
+	width: 90%;
+	text-align: justify;
+}
+
+a {
+	font-size: 20px;
+	color: red;
+}
+
+#login {
+	display: inline-block;
+	margin-top: 40px;
+	margin-left: 10px;
+	width: 40%;
+}
+
+.button {
+	background-color: blue;
+	border-radius: 8px;
+}
+
+#registerbutton {
+	margin-left: 30px;
+}
+
+.button:hover {
+	background-color: red;
+	color: blue;
+}
+
+a:hover {
+	color: blue;
+}
+
+.errorlist {
+	color: red;
+	margin-left: 10px;
+}
+
+.helptext {
+	font-size: 12px;
+	font-style: italic;
+}
+
+div {
+	margin-left: 20px;
+}
+
+#register {
+	display: block;
+	float: left;
+	background-color: #DCDCDC;
+	padding: 3px;
+	border-radius: 8px;
+}
+
+#logout {
+	display: inline-block;
+	float: right;
+	background-color: #DCDCDC;
+	padding: 3px;
+	border-radius: 8px;
+	margin-right: 20px;
+}
+
+#login1 {
+	display: inline-block;
+	background-color: #DCDCDC;
+	padding: 3px;
+	border-radius: 8px;
+	margin-left: 5px;
+}
+
+#create {
+	display: inline-block;
+	width: 100%;
+	border-radius: 30px;
+	margin-top: 5px;
+}
+
+.post {
+	background-color: #DCDCDC;
+	margin: 3px;
+	border-radius: 20px;
+}
+
+.title {
+	color: blue;
+	display: block;
+	font-size: 20px;
+	padding: 2px;
+}
+
+.title:hover {
+	color: red;
+	font-weight: bold;
+}
+
+.content {
+	color: black;
+	display: block;
+	border: solid black 1px;
+	padding: 10px;
+	text-align: justify;
+	width: 93%;
+}
+
+#links {
+	margin-left: 1px;
+	margin-right: 30px;
+}
+
+#id_content {
+	height: 150px;
+}
+
+.date{
+	color: black;
+	display: block;
+	margin-left: 15px;
+	font-style: italic;
+	font-size: 14px;
+	padding-bottom: 2px;
+}
+
+#delete {
+	float: right;
+	margin-right: 40px;
+	font-weight: bold;
+}
+
+#delete:hover {
+	float: right;
+	margin-right: 40px;
+	font-weight: bold;
+	height: 60px;
+	background-color: yellow;
+}
+
+.author{
+	font-weight: bold;
+	font-size: 15px;
+}

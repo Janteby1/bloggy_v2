@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="post-list large-10 columns">
+        {% for post in all_posts reversed %}
+
+        <article>
+            <h3><a href="{% url 'blog:details' id=post.id %}">{{post.title}}</a></h3>
+            <p>{{post.content}}</p>
+            <footer>
+                Author: {{post.user.username}} <em>Posted: {{post.created_at}}</em>
+
+            </footer>
+        </article>
+       
+
+        {# no horizontal line after last post #}
+        {% if not forloop.last %}<hr>{% endif %}
+        
+        {% endfor %}
+
+    </div>
+
+    <div class="create-sidebar large-2 large-centered text-center columns">
+        {% if username %}
+        <nav>
+            <a href="{% url 'blog:add' %}" class="button">Create Post</a>
+        </nav>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock content %}

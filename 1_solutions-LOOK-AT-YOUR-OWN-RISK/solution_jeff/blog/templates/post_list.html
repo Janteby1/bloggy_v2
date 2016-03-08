@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+    <h1>posts</h1>
+    {% for post in posts %}
+
+        <article>
+            <h3><a href="{% url 'blog:detail' pk=post.pk %}">{{post.title}}</a></h3>
+            <p>{{post.content}}</p>
+            <footer>
+                Author: {{post.user.username}} <em>Posted: {{post.created_at}}</em>
+            </footer>
+        </article>
+
+    {% endfor %}
+</body>
+</html>
